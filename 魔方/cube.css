@@ -1,0 +1,71 @@
+*{padding:0;margin:0;}
+li{list-style:none;}
+body{
+	font-size:12px;
+	background:#fff;
+	font-family:'Helvetica Neue',Arial,sans-serif;
+	-webkit-text-size-adjust: none;color:#333;
+    -moz-user-select:none;
+	-webkit-user-select:none;
+}
+#cube_ran {
+	background:#F03; 
+	width:50px; 
+	height:50px;
+	border-radius:25px;
+	color:#FFF; 
+	font-size:20px; 
+	font-family:微软雅黑;
+	font-weight:bold;
+	line-height:50px;
+	text-align:center;
+	position:relative;
+	left:0px;
+	top:-550px;
+}
+#box{
+	position:relative;
+	top:180px;
+	left:150px;
+	width:500px;
+	height:500px;
+    -moz-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+	-webkit-perspective:800px;
+	-moz-perspective:800px;
+}
+#cube{
+	width:100px;
+	height:100px;
+	margin:100px auto; 
+    -moz-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    -webkit-transition:0.5s ease all;
+    -moz-transition:0.5s ease all;
+    -webkit-transform:rotateX(330deg) rotateY(30deg);
+    -moz-transform:rotateX(330deg) rotateY(30deg);
+}
+#cube li{
+	display:block;
+	position:absolute;
+	width:98px;
+	height:98px;
+	font-size:90px;
+	line-height:98px;
+	text-align:center;
+	border:1px solid #333;
+	z-index:10;
+    -moz-backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    -webkit-transition:0.5s ease all;
+    -moz-transition:0.5s ease all;
+    -moz-user-select:none;
+	-webkit-user-select:none;
+}
+#topF, #bottomF, #leftF, #rightF, #frontF, #backF{
+    -moz-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    -webkit-transition:0.5s ease all;
+    -moz-transition:0.5s ease all;
+}
+input[type="range"]{width:800px;}

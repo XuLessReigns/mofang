@@ -1,0 +1,177 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Margic Cube</title>  
+    <link  rel="stylesheet" type="text/css" href="margic-cube.css">  
+	<style>
+		* {  
+    margin: 0;  
+    padding:0;  
+}  
+#outerContainer{  
+    position: absolute;  
+    top: 300px;  
+    left: 300px;  
+    width: 200px;  
+    height: 200px;  
+    -webkit-transform-style: preserve-3d;  
+    transform-style: preserve-3d;  
+    transform-origin: 50% 50%;  /*50% 50%是相对于width和height的，如果不设置width和height则transform-origin不起作用*/  
+    backface-visibility: hidden;  
+    -webkit-animation: animations 4s ease-in-out 0.1s infinite;  
+    -moz-animation: animations 4s ease-in-out 0.1s infinite;  
+    -o-animation: animations 4s ease-in-out 0.1s infinite;  
+    animation: animations 4s ease-in-out 0.1s infinite;  
+}  
+@-webkit-keyframes animations {  
+    0%{-webkit-transform:rotateZ(270deg); }  
+    25%{-webkit-transform:rotateY(180deg); }  
+    50%{-webkit-transform:rotateZ(-270deg);}  
+    75%{-webkit-transform:rotateY(-180deg);}  
+}  
+@-moz-keyframes animations {  
+    0%{-moz-transform:rotateZ(270deg); }  
+    25%{-moz-transform:rotateY(180deg); }  
+    50%{-moz-transform:rotateZ(-270deg);}  
+    75%{-moz-transform:rotateY(-180deg);}  
+}  
+@-o-keyframes animations {  
+    0%{-o-transform:rotateZ(270deg); }  
+    25%{-o-transform:rotateY(180deg); }  
+    50%{-o-transform:rotateZ(-270deg);}  
+    75%{-o-transform:rotateY(-180deg);}  
+}  
+@keyframes animations {  
+    0%{transform:rotateZ(270deg); }  
+    25%{transform:rotateY(180deg); }  
+    50%{transform:rotateZ(-270deg);}  
+    75%{transform:rotateY(-180deg);}  
+}  
+#container {  
+    -webkit-transform-style: preserve-3d;  
+    transform-style: preserve-3d;  
+    backface-visibility: hidden;  
+}  
+#container>div {  
+    position: absolute;  
+    top: 0;  
+    width: 198px;  
+    height: 198px;  
+    border: 1px solid darkgray; /*边缘的边框总宽度为2px*/  
+}  
+.one{  
+    background-color: blue;  
+    -webkit-transform: translateZ(100px);  
+    transform: translateZ(100px);  
+}  
+.two{  
+    background-color: white;  
+    -webkit-transform: rotateX(90deg) translateZ(100px);  
+    transform: rotateX(90deg) translateZ(100px);  
+}  
+.three{  
+    background-color: yellow;  
+    -webkit-transform: rotateX(90deg) translateZ(-100px);  
+    transform: rotateX(90deg) translateZ(-100px);  
+}  
+.four{  
+    background-color: orange;  
+    -webkit-transform: rotateY(90deg) translateZ(-100px);  
+    -moz-transform: rotateY(90deg) translateZ(-100px);  
+    -ms-transform: rotateY(90deg) translateZ(-100px);  
+    -o-transform: rotateY(90deg) translateZ(-100px);  
+    transform: rotateY(90deg) translateZ(-100px);  
+}  
+.five{  
+    background-color: red;  
+    -webkit-transform: rotateY(90deg) translateZ(100px);  
+    transform: rotateY(90deg) translateZ(100px);  
+}  
+.six{  
+    background-color: green;  
+    -webkit-transform: translateZ(-100px);  
+    transform: translateZ(-100px);  
+}  
+.min_cube{  
+    width: 64px;  
+    height: 64px;  
+    float: left;  
+    border: 1px solid darkgray; /*中间的边框总宽度为2px*/  
+}  
+	</style>
+</head>  
+
+<body>  
+<div id="outerContainer">  
+<div id="container">  
+   <div class="one">  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+   </div>  
+   <div class="two">  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+   </div>  
+   <div class="three">  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+   </div>  
+   <div class="four">  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+   </div>  
+   <div class="five">  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+   </div>  
+   <div class="six">  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+       <div class="min_cube"></div>  
+   </div>  
+</div>  
+</div>  
+</body>  
+</html>  
